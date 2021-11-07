@@ -3,10 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+const GlobalStyle = createGlobalStyle``
+const theme = {
+  colors: {
+    primary: '#0070f3',
+  },
+}
 ReactDOM.render(
   <React.StrictMode>
+            <ThemeProvider theme={theme}>
+
+
     <App />
+            </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
